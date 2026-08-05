@@ -1,19 +1,19 @@
 import { Footer } from "@/components/layout";
 import type { Metadata, Viewport } from "next";
-import { Poppins } from "next/font/google";
+import { Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["500", "700"],
+const barlowSemiCondensed = Barlow_Semi_Condensed({
+  variable: "--font-barlow-semi-condensed",
+  weight: ["600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const title = "Shortly URL shortening API landing page";
+const title = "Rock, Paper, Scissors";
 const description =
-  "Shorten any link, track how it performs, and build your brand's recognition — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://vanta-url-shortening-api-landing-page.netlify.app";
+  "Play Rock, Paper, Scissors against the computer and keep your score between visits — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
+const siteUrl = "https://vanta-rock-paper-scissors-game.netlify.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#ffffff",
+  themeColor: "#1F3756",
 };
 
 export default function RootLayout({
@@ -47,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} antialiased`}>
+    <html lang="en" className={`${barlowSemiCondensed.variable} antialiased`}>
       <body className="flex min-h-dvh flex-col">
         {children}
         <Footer />

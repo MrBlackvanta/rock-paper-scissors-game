@@ -1,66 +1,12 @@
 @import "tailwindcss";
 
-@theme {
-  --color-cyan: hsl(180 65.7% 49.2%);
-  --color-cyan-deep: hsl(180 65.7% 31.1%);
-  --color-cyan-soft: hsl(180 56.6% 74.7%);
-  --color-dark-violet: hsl(257 27.3% 25.9%);
-  --color-dark-violet-soft: hsl(256 25.9% 33.3%);
-  --color-red: hsl(0 86.8% 67.3%);
-  --color-red-soft: hsl(0 86.8% 78.7%);
-  --color-gray: hsl(0 0% 75%);
-  --color-grayish-violet: hsl(257 7.4% 63.1%);
-  --color-grayish-violet-deep: hsl(257 7.4% 45.4%);
-  --color-very-dark-blue: hsl(255 10.9% 21.6%);
-  --color-very-dark-violet: hsl(260 8% 14%);
-  --color-off-white: hsl(225 33.3% 95.3%);
-
-  --container-page: 69.375rem;
-
-  --text-display-lg: 5rem;
-  --text-display-lg--line-height: 5.625rem;
-  --text-display: 2.625rem;
-  --text-display--line-height: 3rem;
-  --text-heading: 2.5rem;
-  --text-heading--line-height: 3rem;
-  --text-heading-sm: 1.75rem;
-  --text-heading-sm--line-height: 3rem;
-  --text-lead: 1.375rem;
-  --text-lead--line-height: 2.25rem;
-  --text-lead-sm: 1.125rem;
-  --text-lead-sm--line-height: 1.875rem;
-  --text-intro: 1.125rem;
-  --text-intro--line-height: 2rem;
-  --text-intro-sm: 1rem;
-  --text-intro-sm--line-height: 1.75rem;
-  --text-copy: 0.9375rem;
-  --text-copy--line-height: 1.625rem;
-  --text-field: 1.25rem;
-  --text-field--line-height: 2.25rem;
-  --text-field-sm: 1rem;
-  --text-field-sm--line-height: 2.25rem;
-  --text-note: 1rem;
-  --text-note--line-height: 1.125rem;
-  --text-title: 1.375rem;
-  --text-label: 1.25rem;
-  --text-label-md: 1.125rem;
-  --text-label-sm: 0.9375rem;
-
-  --tracking-display: -0.025em;
-  --tracking-body: 0.0068em;
-  --tracking-footer: -0.0156em;
-
-  --radius-field: 5px;
-  --radius-panel: 10px;
-}
-
 @theme inline {
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-barlow-semi-condensed);
 }
 
 @layer base {
   body {
-    @apply bg-white font-sans font-medium text-grayish-violet-deep;
+    @apply bg-[#1F3756] font-sans font-semibold text-white;
   }
   a,
   button {
@@ -68,59 +14,10 @@
   }
 }
 
-@keyframes v-reveal {
-  from {
-    opacity: 0;
-    transform: translateY(0.75rem);
-  }
-}
-
-@utility v-reveal {
-  @media (prefers-reduced-motion: no-preference) {
-    @supports (animation-timeline: view()) {
-      animation: v-reveal linear both;
-      animation-timeline: view();
-      animation-range: entry 0% entry 80%;
-    }
-  }
-}
-
 @utility v-focus-ring {
-  @apply rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-deep;
-}
-
-@utility v-focus-ring-inverse {
-  @apply rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan;
-}
-
-@utility v-nav-link {
-  @apply text-label-sm font-bold text-grayish-violet-deep transition-colors hover:text-very-dark-blue motion-reduce:transition-none;
-}
-
-@utility v-menu-link {
-  @apply block text-center text-label-md font-bold text-white transition-colors hover:text-cyan motion-reduce:transition-none;
-}
-
-@utility v-btn-base {
-  @apply inline-flex items-center justify-center font-bold transition-colors motion-reduce:transition-none;
-}
-
-@utility v-btn {
-  @apply v-btn-base bg-cyan text-very-dark-blue hover:bg-cyan-soft;
-}
-
-@utility v-btn-copied {
-  @apply v-btn-base bg-dark-violet text-white;
-}
-
-@utility v-footer-nav-link {
-  @apply tracking-footer text-gray transition-colors hover:text-cyan motion-reduce:transition-none;
-}
-
-@utility v-social-link {
-  @apply block text-white transition-colors hover:text-cyan motion-reduce:transition-none;
+  @apply rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
 }
 
 @utility v-footer-link {
-  @apply rounded-xs underline underline-offset-2 transition-colors hover:text-cyan motion-reduce:transition-none;
+  @apply rounded-xs underline underline-offset-2;
 }
