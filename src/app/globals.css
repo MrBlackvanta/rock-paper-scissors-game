@@ -1,12 +1,79 @@
 @import "tailwindcss";
 
+@theme {
+  --color-backdrop-near: #1f3757;
+  --color-backdrop-far: #131537;
+
+  --color-scissors: #eb9f0e;
+  --color-scissors-rim: #c76c1b;
+  --color-paper: #4664f4;
+  --color-paper-rim: #2a45c2;
+  --color-rock: #db2e4d;
+  --color-rock-rim: #9d1634;
+  --color-lizard: #834ee3;
+  --color-lizard-rim: #5f37a8;
+  --color-spock: #3fb7cd;
+  --color-spock-rim: #2d8dab;
+
+  --color-ink: #3b4262;
+  --color-ink-score: #565468;
+  --color-accent: #2a45c2;
+
+  --color-well: #babfd4;
+  --color-well-face-top: #dadada;
+  --color-well-face-bottom: #f3f3f3;
+
+  --color-surface-top: #ffffff;
+  --color-surface-bottom: #f3f3f3;
+
+  --color-diagram-ring: #b1b4c5;
+  --color-diagram-well: #e1e4ed;
+  --color-diagram-hand: #8a90ac;
+  --color-diagram-label: #707594;
+
+  --text-score: 4rem;
+  --text-score--line-height: 1;
+  --text-score-sm: 2.5rem;
+  --text-score-sm--line-height: 1;
+  --text-result: 3.5rem;
+  --text-result--line-height: 1.2;
+  --text-modal-title: 2rem;
+  --text-modal-title--line-height: 1;
+  --text-logo: 1.75rem;
+  --text-logo--line-height: 1.375rem;
+  --text-logo-sm: 0.75rem;
+  --text-logo-sm--line-height: 0.59375rem;
+  --text-caption: 1.5rem;
+  --text-caption--line-height: 2rem;
+  --text-caption-sm: 0.9375rem;
+  --text-caption-sm--line-height: 2rem;
+  --text-label: 1rem;
+  --text-label--line-height: 1.2;
+  --text-label-sm: 0.625rem;
+  --text-label-sm--line-height: 1.2;
+
+  --tracking-label: 0.15625em;
+  --tracking-caption: 0.125em;
+
+  --radius-header: 0.9375rem;
+  --radius-header-sm: 0.3125rem;
+
+  --shadow-raised: 0 3px 3px rgb(0 0 0 / 0.1967);
+  --text-shadow-raised: 0 3px 3px rgb(0 0 0 / 0.1967);
+}
+
 @theme inline {
   --font-sans: var(--font-barlow-semi-condensed);
 }
 
 @layer base {
   body {
-    @apply bg-[#1F3756] font-sans font-semibold text-white;
+    @apply bg-backdrop-near font-sans font-semibold text-white;
+    background-image: radial-gradient(
+      134.345% 134.35% at 50% 0%,
+      var(--color-backdrop-near),
+      var(--color-backdrop-far)
+    );
   }
   a,
   button {
@@ -16,6 +83,24 @@
 
 @utility v-focus-ring {
   @apply rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white;
+}
+
+@utility v-focus-ring-inverse {
+  @apply rounded-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+}
+
+@utility v-surface {
+  background-image: linear-gradient(
+    var(--color-surface-top),
+    var(--color-surface-bottom)
+  );
+}
+
+@utility v-coin-sheen {
+  background-image: linear-gradient(
+    rgb(255 255 255 / 0.0966),
+    rgb(255 255 255 / 0.0001)
+  );
 }
 
 @utility v-footer-link {
