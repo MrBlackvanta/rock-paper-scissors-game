@@ -10,9 +10,9 @@ const barlowSemiCondensed = Barlow_Semi_Condensed({
   display: "swap",
 });
 
-const title = "Rock, Paper, Scissors";
+const title = "Rock, Paper, Scissors, Lizard, Spock";
 const description =
-  "Play Rock, Paper, Scissors against the computer and keep your score between visits — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
+  "Play Rock, Paper, Scissors, Lizard, Spock against the computer and keep your score between visits — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
 const siteUrl = "https://vanta-rock-paper-scissors-game.netlify.app";
 
 export const metadata: Metadata = {
