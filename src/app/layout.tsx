@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1F3756",
+  themeColor: "#1F3757",
 };
 
 export default function RootLayout({
@@ -48,9 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${barlowSemiCondensed.variable} antialiased`}>
-      <body className="flex min-h-dvh flex-col">
-        {children}
-        <Footer />
+      <body>
+        <div className="flex min-h-dvh flex-col overflow-clip">
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
