@@ -21,7 +21,8 @@ This is a solution to the [Rock, Paper, Scissors game challenge on Frontend Ment
 ### Links
 
 - Solution URL: [GitHub](https://github.com/MrBlackvanta/rock-paper-scissors-game)
-- Live Site URL: [Netlify](https://vanta-rock-paper-scissors-game.netlify.app)
+- Live Site URL: [Cloudflare](https://rock-paper-scissors-game.abdelrhman-ahmed8881.workers.dev)
+- Mirror: [Netlify](https://vanta-rock-paper-scissors-game.netlify.app)
 
 ## My process
 
