@@ -10,10 +10,17 @@ const barlowSemiCondensed = Barlow_Semi_Condensed({
   display: "swap",
 });
 
-const title = "Rock, Paper, Scissors, Lizard, Spock";
+const title = "Rock, Paper, Scissors | Now with Lizard and Spock";
 const description =
-  "Play Rock, Paper, Scissors, Lizard, Spock against the computer and keep your score between visits — Frontend Mentor challenge built with Next.js, TypeScript, and Tailwind CSS.";
-const siteUrl = "https://rock-paper-scissors-game.abdelrhman-ahmed8881.workers.dev";
+  "Play Rock, Paper, Scissors against the house with two picks added, Lizard and Spock. Your score is kept between visits and the rules are one tap away.";
+const siteUrl =
+  "https://rock-paper-scissors-game.abdelrhman-ahmed8881.workers.dev";
+const card = {
+  url: "/opengraph-image.jpg",
+  width: 1200,
+  height: 630,
+  alt: "Rock, Paper, Scissors, now with Lizard and Spock",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -24,14 +31,16 @@ export const metadata: Metadata = {
     title,
     description,
     url: "/",
-    siteName: title,
+    siteName: "Rock, Paper, Scissors",
     locale: "en_US",
     type: "website",
+    images: [card],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
+    images: [card],
   },
 };
 
