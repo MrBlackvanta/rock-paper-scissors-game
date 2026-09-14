@@ -1,6 +1,7 @@
 import { Footer } from "@/components/layout";
 import type { Metadata, Viewport } from "next";
 import { Barlow_Semi_Condensed } from "next/font/google";
+import { siteUrl } from "@/app/site";
 import "./globals.css";
 
 const barlowSemiCondensed = Barlow_Semi_Condensed({
@@ -13,8 +14,6 @@ const barlowSemiCondensed = Barlow_Semi_Condensed({
 const title = "Rock, Paper, Scissors | Now with Lizard and Spock";
 const description =
   "Play Rock, Paper, Scissors against the house with two picks added, Lizard and Spock. Your score is kept between visits and the rules are one tap away.";
-const siteUrl =
-  "https://rock-paper-scissors-game.abdelrhman-ahmed8881.workers.dev";
 const card = {
   url: "/opengraph-image.jpg",
   width: 1200,
